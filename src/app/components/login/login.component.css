@@ -1,0 +1,88 @@
+/* Ensure the html and body take up the full height of the viewport */
+html, body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+  }
+  
+  /* Page container to center the form */
+  .page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+  }
+  
+  /* Container for the form */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Style for headings */
+  h4 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Style for input containers */
+  .inputs {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Style for labels */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Style for input fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Style for error messages */
+  h5 {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Style for buttons */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

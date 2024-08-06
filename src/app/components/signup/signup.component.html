@@ -1,0 +1,49 @@
+<div class="page-container">
+    <form class="container" #registerForm="ngForm">
+        <h4>Please Register</h4>
+        
+        <div class="inputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" required 
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                   ngModel #email="ngModel"/>
+            <h5 style="color: red;" [hidden]="email.valid || email.untouched">
+                Please enter a correct email
+            </h5>
+        </div>
+
+        <div class="inputs">
+            <label for="password">Password</label>
+            <input type="password" name="password" 
+                   pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}" 
+                   required ngModel #password="ngModel"/>
+            <h5 style="color: red;" [hidden]="password.valid || password.untouched">
+                Please enter a correct password
+            </h5>
+        </div>
+
+        <div class="inputs">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" pattern="[0-9]{10}" required 
+                   ngModel #phone="ngModel"/>
+            <h5 style="color: red;" [hidden]="phone.valid || phone.untouched">
+                Please enter a valid 10-digit phone number
+            </h5>
+        </div>
+
+        <div class="inputs">
+            <label>Gender</label>
+            <div class="gender-inputs">
+                <label><input type="radio" name="gender" value="male" required ngModel> Male</label>
+                <label><input type="radio" name="gender" value="female" required ngModel> Female</label>
+            </div>
+        </div>
+
+       
+
+        <div class="inputs">
+            <button type="submit" [disabled]="registerForm.invalid" (click)="register(registerForm)" >Register</button>
+            <button type="reset(registerForm)">Reset</button>
+        </div>
+    </form>
+</div>

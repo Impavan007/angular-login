@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 4vw;
+
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    list-style: none;
+}
+li a.active {
+    color: orange;
+    font-size: 4vh;
+    font-weight: 2vw;
+  }
+  
+a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    
+}
+h1 a{
+    font-size: 3vw;
+}

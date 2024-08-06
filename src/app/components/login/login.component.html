@@ -1,0 +1,27 @@
+<div class="page-container">
+    <form class="container" [formGroup]="loginForm">
+      <h4>Please Login</h4>
+      
+      <div class="inputs">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" />
+        <h5 style="color: red;" *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+          Please enter a correct email
+        </h5>
+      </div>
+  
+      <div class="inputs">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" />
+        <h5 style="color: red;" *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+          Password should be at least 6 characters long
+        </h5>
+      </div>
+  
+      <div class="inputs">
+        <button type="button" [disabled]="loginForm.invalid" (click)="login()">Submit</button>
+        <button type="button" (click)="reset()">Reset</button>
+      </div>
+    </form>
+  </div>
+  
